@@ -27,32 +27,32 @@ MovieRecommender recommender = new MovieRecommender("rating.csv", "movie.csv");
 ```
 2. Create a user object and give it movie ratings. 
 ```
-UserRating user2 = new UserRating(0); 
-		user2.addRating(858, 5);
-		user2.addRating(1028, 3);
-		user2.addRating(1721, 4);
-		user2.addRating(7064, 5);
-		user2.addRating(1172, 5);
-		user2.addRating(2324, 5);
-		user2.addRating(527, 4);
-		user2.addRating(64034 ,5);
-		user2.addRating(60397 ,4);
-		user2.addRating(3545 ,4);
-		user2.addRating(4681 ,4);
-		user2.addRating(597, 4);
-		user2.addRating(1955, 4);
-		user2.addRating(4857, 4);
-		user2.addRating(45720, 4);
-		user2.addRating(58, 5);
-		user2.addRating(1206, 1);
-		user2.addRating(33836, 1);
-		user2.addRating(2315, 1);
-		user2.addRating(5323, 1);
-		user2.addRating(7004, 1);
+UserRating newuser = new UserRating(0); 
+		newuser.addRating(858, 5);
+		newuser.addRating(1028, 3);
+		newuser.addRating(1721, 4);
+		newuser.addRating(7064, 5);
+		newuser.addRating(1172, 5);
+		newuser.addRating(2324, 5);
+		newuser.addRating(527, 4);
+		newuser.addRating(64034 ,5);
+		newuser.addRating(60397 ,4);
+		newuser.addRating(3545 ,4);
+		newuser.addRating(4681 ,4);
+		newuser.addRating(597, 4);
+		newuser.addRating(1955, 4);
+		newuser.addRating(4857, 4);
+		newuser.addRating(45720, 4);
+		newuser.addRating(58, 5);
+		newuser.addRating(1206, 1);
+		newuser.addRating(33836, 1);
+		newuser.addRating(2315, 1);
+		newuser.addRating(5323, 1);
+		newuser.addRating(7004, 1);
 ```
-3. Pass in this user object to recommendMovies() method. It returns an ArrayList of Movies which will be recommended to user. (Each movie object has a predicted score class variable which contains the algorithms score prediction for this user) 
+3. Pass in this user object to the recommendMovies() method. It returns an ArrayList of Movies which will be recommended to user. (Each movie object has a predicted score class variable which contains the algorithms score prediction for this user) 
 ```
-ArrayList<Movie> RecommendedMovies = recommender.recommendMovies(user2); 	
+ArrayList<Movie> RecommendedMovies = recommender.recommendMovies(newuser); 	
 ```
 4. Do something with movie data. (Print out etc.) 
 Example: 
