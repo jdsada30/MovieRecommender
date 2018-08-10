@@ -18,37 +18,37 @@ The datasets describe ratings and free-text tagging activities from MovieLens, a
 #### movie.csv: movieId, title, genres
 #### rating.csv: userId, movieId, rating, timestamp
 
-### Walkthrough
+### Demo Run (Walkthrough)
 
 1. Initialize MovieRecommender object, passing in data files as a parameters. 
 
 ```
 MovieRecommender recommender = new MovieRecommender("rating.csv", "movie.csv"); 
 ```
-2. Create a user object and give it movie ratings. 
+2. Create a user object and give it movie ratings.  
 ```
 UserRating newuser = new UserRating(0); 
-		newuser.addRating(858, 5);
-		newuser.addRating(1028, 3);
-		newuser.addRating(1721, 4);
-		newuser.addRating(7064, 5);
-		newuser.addRating(1172, 5);
-		newuser.addRating(2324, 5);
-		newuser.addRating(527, 4);
-		newuser.addRating(64034 ,5);
-		newuser.addRating(60397 ,4);
-		newuser.addRating(3545 ,4);
-		newuser.addRating(4681 ,4);
-		newuser.addRating(597, 4);
-		newuser.addRating(1955, 4);
-		newuser.addRating(4857, 4);
-		newuser.addRating(45720, 4);
-		newuser.addRating(58, 5);
-		newuser.addRating(1206, 1);
-		newuser.addRating(33836, 1);
-		newuser.addRating(2315, 1);
-		newuser.addRating(5323, 1);
-		newuser.addRating(7004, 1);
+		newuser.addRating(858, 5); //The Godfather was rated 5 stars
+		newuser.addRating(1028, 3); //Mary Poppins was rated 3 stars
+		newuser.addRating(1721, 4); //Titanic was rated 4 stars. 
+		newuser.addRating(7064, 5); //Beauty and the beast was rated 5 stars 
+		newuser.addRating(1172, 5);//Cinema Paradiso was rated 5 stars. 
+		newuser.addRating(2324, 5); //La Vita e bella was rated 5 stars
+		newuser.addRating(527, 4); //Schindler's list was rated 4 stars
+		newuser.addRating(64034 ,5);//Boy in the Striped Pyjamas was rated 5 stars
+		newuser.addRating(60397 ,4); //Mamma Mia was rated 4 stars
+		newuser.addRating(3545 ,4);//Cabaret was rated 4 stars
+		newuser.addRating(4681 ,4); //War of the roses was rated 4 stars
+		newuser.addRating(597, 4); //Pretty woman was rated 4 stars
+		newuser.addRating(1955, 4); //Kramer vs Kramer was rated 4 stars.
+		newuser.addRating(4857, 4);//Fiddler on the roof was rated 4 stars
+		newuser.addRating(45720, 4);//Devil wears prada was rated 4 stars
+		newuser.addRating(58, 5); //Postino II was rated 4 stars 
+		newuser.addRating(1206, 1); //A Clockwork Orange was rated 1 star
+		newuser.addRating(33836, 1); //bewitched was rated 1 star
+		newuser.addRating(2315, 1); // Bride of chucky was rated 1 star
+		newuser.addRating(5323, 1); // Jason X was rated 1 star
+		newuser.addRating(7004, 1); //Kindergarten Cop was rated 1 star
 ```
 3. Pass in this user object to the recommendMovies() method. It returns an ArrayList of Movies which will be recommended to user. (Each movie object has a predicted score class variable which contains the algorithms score prediction for this user) 
 ```
@@ -137,6 +137,21 @@ The following movies and scores were predicted for you:
 ## Testing
 
 The method algorithmAccuracy() in the MovieRecommender class is used to test the accuracy of the algorithm. It essentially removes a known user from the data set and runs the algorithm as it if were a new user and hides some its known ratings for movies. Based on the predicted scores for this user it compares them to its actual ratings for each movie and calculates the mean absolute precent error to determine the predicted scores' accuracy. The method will perform this task for multiple users in the data set to determine how effective the algorithm is overall. 
-NOTE: In 52 runs, the algorithm was 80% accurate. 
+NOTE: In 52 runs, the algorithm was 82% accurate. 
+
+## Optimization
+The following are possible optimizations for this K-NN implementation:
+###### 1. Optimizing K:
+K was calculated by taking the square root of the number of possible neighbors(users) and dividing by 2.<br />
+K = Ceil(Sqrt(460)/2)= 11<br />
+Note: Smaller K values had a much greater variation between users than larger K values tested. <br />
+The following graph illustrates the varying accuracy levels for different k values that were tested:
+![alt text](https://github.com/jdsada30/MovieRecommender/blob/master/K-Value-Accuracy.png)
+###### 2. Similarity Score Calculation:
+This implementation uses euclidean distance to determine how similar two users are from each other. However, there are other possible implementations for determining similarity between users including cosine similarity and pearson correlation coefficient calculations. 
+
+
+
+
 
 
