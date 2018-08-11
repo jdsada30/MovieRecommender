@@ -145,7 +145,7 @@ The following are possible optimizations for this K-NN implementation:
 K was calculated by taking the square root of the number of possible neighbors(users) and dividing by 2.<br />
 K = Ceil(Sqrt(460)/2)= 11<br />
 Note: Smaller K values had a much greater variation between users than larger K values tested. <br />
-The following graph illustrates the varying accuracy levels for different k values that were tested:
+The following graph illustrates the varying accuracy percentages for different k values that were tested:
 ![alt text](https://github.com/jdsada30/MovieRecommender/blob/master/K-Value-Accuracy.png)
 ###### 2. Similarity Score Calculation:
 This implementation uses euclidean distance to determine how similar two users are from each other. However, there are other possible implementations for determining similarity between users including cosine similarity and pearson correlation coefficient calculations. 
