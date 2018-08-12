@@ -148,7 +148,7 @@ Note: Smaller K values had a much greater variation between users than larger K 
 The following graph illustrates the varying accuracy percentages for different k values that were tested:
 ![alt text](https://github.com/jdsada30/MovieRecommender/blob/master/K-Value-Accuracy.png)
 ###### 2. Similarity Score Calculation:
-This implementation uses euclidean distance to determine how similar two users are from each other. However, there are other possible implementations for determining similarity between users including cosine similarity and pearson correlation coefficient calculations. 
+This implementation uses euclidean distance to determine how similar two users are from each other. However, there are other possible implementations for determining similarity between users including cosine similarity and pearson correlation coefficient calculation which could be implemented to improve the algorithms accuracy. 
 
 
 
