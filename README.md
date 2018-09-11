@@ -3,7 +3,7 @@
 A movie recommendation system implementation which uses simple kNN-collaborative filtering.  
 ## kNN Algorithm and Implementation
 K-Nearest Neighbors algorithm is used for clustering data into similar groups/clusters. (Neighbors) 
-This implementation of kNN uses a similarity score which rates how similar two users are to each other based on the movies they have both rated. It uses simple euclidean distance to calculate the similarity score. (This calculation could be  improved by implementing Pearson correlation coefficient or cosine similarity instead.) 
+This implementation of kNN uses a similarity score which rates how similar two users are to each other based on the movies they have both rated. It uses simple Euclidean distance to calculate the similarity score. (This calculation could be  improved by implementing Pearson correlation coefficient or cosine similarity instead.) 
 Given a new user, the algorithm will calculate the similarity score between it and all of the other users. It will then find the K most similar users and based on the movies that these K-users have rated, it will predict how the new user would rate movies that it has not yet seen/rated. 
 More info on kNN: https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm
 ### Classes 
