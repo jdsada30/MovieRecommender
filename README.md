@@ -136,7 +136,7 @@ The following movies and scores were predicted for you:
 ```
 ## Testing
 
-The method algorithmAccuracy() in the MovieRecommender class is used to test the accuracy of the algorithm. It essentially removes a known user from the data set and runs the algorithm as it if were a new user and hides some its known ratings for movies. Based on the predicted scores for this user it compares them to its actual ratings for each movie and calculates the mean absolute precent error to determine the predicted scores' accuracy. The method will perform this task for multiple users in the data set to determine how effective the algorithm is overall. 
+The method algorithmAccuracy() in the MovieRecommender class is used to test the accuracy of the algorithm. It essentially removes a known user from the data set and runs the algorithm as it if were a new user and hides some its known ratings for movies. Based on the predicted scores for this user it compares them to its actual ratings for each movie and calculates the mean absolute percent error to determine the predicted scores' accuracy. The method will perform this task for multiple users in the data set to determine how effective the algorithm is overall. 
 NOTE: In 52 runs, the algorithm was 82% accurate. 
 
 ## Optimization
