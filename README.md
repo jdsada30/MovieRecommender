@@ -76,7 +76,7 @@ String fiveStars = "*****";
 				System.out.println(m.title+ " " + oneStar); 
 		}
 ```
-5. Final Results Example: (With some movies ommited)  
+5. Final Results Example: (With some movies omited)  
 ```
 The following movies and scores were predicted for you: 
 "Into the Arms of Strangers: Stories of the Kindertransport (2000)"  *****
