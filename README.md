@@ -1,4 +1,4 @@
-# Movie Recommender using kNN Algorithm	
+# KNN-Based Clustering for Movie Recommender Systems
 
 A movie recommendation system implementation which uses simple kNN-collaborative filtering.  
 ## kNN Algorithm and Implementation
