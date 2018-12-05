@@ -15,7 +15,7 @@ public class Main {
 		MovieRecommender recommender = new MovieRecommender("rating.csv", "movie.csv"); 
 		
 		//recommender.algorithmAccuracy();
-		
+		//
 		//recommender.algorithmInsights();
 		/*UserRating user1 = new UserRating(0); 
 		user1.addRating(858, 5);
